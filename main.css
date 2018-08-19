@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-bar {
+    background-color: orange;
+    height: 48px;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    height: 91%;
+    height: calc(100% - 48px);
+    width: 100%;
+    background-color: yellow;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header {
+    background-color: deeppink;
+}
+
+section {
+    background-color: lightgrey;
+}
+
+.mood-button {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bottom-nav {
+    background-color: dodgerblue;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
