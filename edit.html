@@ -7,27 +7,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body class="index">
+<body>
+    <nav class="nav-bar">
+        <button class="button-back" onclick="history.back()">Back</button>
+        <h1>Edit</h1>
+        <button class="button-ghost">Settings</button>
+    </nav>
 
     <div class="parent">
         <header>
-            <h1>
-                <img class="logo" src="image/Logo.png" alt="Daily Mood">
-            </h1>
-        </header>
-
-        <section>
-            <p>Pick your daily mood</p>
-            <div class="mood-button" onclick="document.location='comment.html'">
+            <div class="mood-button">
                 <button class="mood-happy"><img src="image/button-happy.png" alt="happy"></button>
                 <button class="mood-meh"><img src="image/button-meh.png" alt="meh"></button>
                 <button class="mood-sad"><img src="image/button-sad.png" alt="sad"></button>
             </div>
+        </header>
+
+        <section>
+            <p>How was your day?</p>
+            <textarea class="enter-comment">
+                this was my super great day ahahaha jajajaja.
+                on s'est beaucoup amusé dans la fumée.
+                mais maintenant que vais-je faire?
+            </textarea>
         </section>
 
         <nav class="bottom-nav">
-            <button class="button button-ghost">Skip</button>
-            <button class="button button-ghost">Let's go</button>
+            <a class="button button-cancel" href="mood.html">Cancel</a>
+            <a class="button button-primary" href="mood.html">Ok</a>
         </nav>
     </div>
 </body>

@@ -42,7 +42,6 @@ header {
 
 .logo {
     width: 150px;
-
 }
 
 section {
@@ -77,4 +76,70 @@ section {
     font-weight: bold;
     font-size: 0.8rem;
     background-color: beige;
+    color: black;
+    display: inline-block;
+    text-align: center;
 }
+
+.button-ghost {
+    visibility: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*onboarding overwrite*/
+
+.onboarding .parent {
+    height: 100%;
+}
+
+.onboarding section {
+    text-align: center;
+}
+
+/*index overwrite*/
+
+.index .parent {
+    height: 100%;
+}
+
+/*comment overwrite*/
+
+.enter-comment {
+    width: 200px;
+    height: 200px;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+/*modd-list overwrite*/
+
+.mood-list section {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+}
+
+.mood-list li {
+    border: 1px solid black;
+    padding: 8px;
+    margin: 8px;
+}
+
+.mood-list li a {
+    display: inline-block;
+    width: 100%;
+}
+
+.mood-list li img {
+    width: 50px;
+    height: 50px;
+}
+
