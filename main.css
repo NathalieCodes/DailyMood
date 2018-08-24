@@ -6,11 +6,19 @@
 html, body {
     height: 100%;
     width: 100%;
+    font-family: sans-serif;
 }
 
 .nav-bar {
     background-color: orange;
     height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar button {
+    width: 70px;
 }
 
 .parent {
@@ -24,12 +32,22 @@ html, body {
     align-items: center;
 }
 
+.parent > * {
+
+}
+
 header {
     background-color: deeppink;
 }
 
+.logo {
+    width: 150px;
+
+}
+
 section {
     background-color: lightgrey;
+    height: 50%;
 }
 
 .mood-button {
@@ -38,9 +56,25 @@ section {
     justify-content: space-evenly;
 }
 
+.mood-button img {
+    width: 68px;
+    height: 68px;
+    margin: 10px;
+}
+
 .bottom-nav {
     background-color: dodgerblue;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+}
+
+.button {
+    border: solid 1px black;
+    border-radius: 4px;
+    padding: 16px;
+    width: 90px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    background-color: beige;
 }
