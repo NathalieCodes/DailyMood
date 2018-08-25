@@ -7,6 +7,7 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: sans-serif;
+    background-color: lightgrey;
 }
 
 .nav-bar {
@@ -94,7 +95,7 @@ ul {
 }
 
 
-/*onboarding overwrite*/
+/* onboarding override */
 
 .onboarding .parent {
     height: 100%;
@@ -104,13 +105,13 @@ ul {
     text-align: center;
 }
 
-/*index overwrite*/
+/* index override */
 
 .index .parent {
     height: 100%;
 }
 
-/*comment overwrite*/
+/* comment override */
 
 .enter-comment {
     width: 200px;
@@ -119,12 +120,16 @@ ul {
     padding: 8px;
 }
 
-/*modd-list overwrite*/
+/* mood-list override */
 
 .mood-list section {
     height: 100%;
     width: 100%;
     overflow: scroll;
+    background-image: url("image/seeyouto.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .mood-list li {
@@ -133,9 +138,32 @@ ul {
     margin: 8px;
 }
 
+.cell-action {
+    text-align: center;
+    background-color: aqua;
+}
+
+.mood-list li.cell-action a {
+    display: inline;
+}
+
+.cell-happy {
+    background-color: lightgreen;
+}
+
+.cell-meh {
+    background-color: lightgoldenrodyellow;
+}
+
+.cell-sad {
+    background-color: lightcoral;
+}
+
 .mood-list li a {
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
 }
 
 .mood-list li img {
@@ -143,3 +171,10 @@ ul {
     height: 50px;
 }
 
+/* mood override */
+
+.mood section p {
+    padding: 8px;
+    margin: 8px;
+    border: black solid 1px;
+}
