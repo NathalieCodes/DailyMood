@@ -156,7 +156,8 @@ ul {
 }
 
 .mood-list li.cell-action a {
-    display: inline;
+    display: inline-block;
+    width: 100%;
 }
 
 .cell-happy {
