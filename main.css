@@ -58,6 +58,10 @@ section {
     margin: 10px;
 }
 
+.mood-selected {
+    border: black solid 3px;
+}
+
 .bottom-nav {
     background-color: dodgerblue;
     width: 100%;
