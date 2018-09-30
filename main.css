@@ -29,10 +29,6 @@ html, body {
     align-items: center;
 }
 
-.parent > * {
-
-}
-
 header {
     background-color: deeppink;
 }
@@ -86,6 +82,17 @@ section {
     visibility: hidden;
 }
 
+.nav-bar .button {
+    width: 80px;
+    padding: 4px 0;
+    margin: 0 8px;
+    text-align: center;
+    font-size: 0.7rem;
+    border: black solid 1px;
+    border-radius: 5px;
+    background-color: lightgrey;
+}
+
 .nav-bar .button-close.button {
     background-image: url(image/close-button.png);
     background-size: 14px;
@@ -107,17 +114,6 @@ section {
     width: 70px;
 }
 
-.nav-bar .button {
-    width: 80px;
-    padding: 4px 0;
-    margin: 0 8px;
-    text-align: center;
-    font-size: 0.7rem;
-    border: black solid 1px;
-    border-radius: 5px;
-    background-color: lightgrey;
-}
-
 a {
     text-decoration: none;
 }
@@ -125,7 +121,6 @@ a {
 ul {
     list-style: none;
 }
-
 
 /* onboarding override */
 
@@ -137,7 +132,7 @@ ul {
     text-align: center;
 }
 
-/* comment override */
+/* comment and edit */
 
 .enter-comment {
     width: 200px;
@@ -151,7 +146,7 @@ ul {
 .mood-list section {
     height: 100%;
     width: 100%;
-    overflow: scroll;
+    overflow: auto;
     background-image: url("image/seeyouto.png");
     background-position: center bottom;
     background-repeat: no-repeat;
