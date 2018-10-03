@@ -7,15 +7,17 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: sans-serif;
-    background-color: lightgrey;
+    background: rgb(91,17,157);
+    background: linear-gradient(152deg, rgba(91,17,157,1) 0%, rgba(243,108,139,1) 100%);
 }
 
 .nav-bar {
-    background-color: orange;
+    /*background-color: orange;*/
     height: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
 
 .parent {
@@ -24,9 +26,10 @@ html, body {
     height: 91%;
     height: calc(100% - 48px);
     width: 100%;
-    background-color: yellow;
+    /*background-color: yellow;*/
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
 }
 
 header {
@@ -38,7 +41,7 @@ header {
 }
 
 section {
-    background-color: lightgrey;
+    /*background-color: lightgrey;*/
     height: 50%;
 }
 
@@ -147,38 +150,13 @@ ul {
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-image: url("image/seeyouto.png");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .mood-list li {
     border: 1px solid black;
     padding: 8px;
     margin: 8px;
-}
-
-.cell-action {
-    text-align: center;
-    background-color: aqua;
-}
-
-.mood-list li.cell-action a {
-    display: inline-block;
-    width: 100%;
-}
-
-.cell-happy {
-    background-color: lightgreen;
-}
-
-.cell-meh {
-    background-color: lightgoldenrodyellow;
-}
-
-.cell-sad {
-    background-color: lightcoral;
+    background-color: white;
 }
 
 .mood-list li a {
@@ -188,10 +166,36 @@ ul {
     color: black;
 }
 
-.mood-list li img {
+.mood-list li a img {
     width: 50px;
     height: 50px;
 }
+
+.mood-list li a span {
+    flex-basis: 100%;
+}
+
+.cell-action {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - (220px / 2));
+    background: rgb(91,17,157);
+    background: linear-gradient(152deg, rgba(91,17,157,1) 0%, rgba(243,108,139,1) 100%);
+    box-shadow: 0px 0px 30px 1px rgba(0,0,0,0.40)
+}
+
+.mood-list li.cell-action a {
+    display: inline-block;
+    width: 100%;
+}
+
 
 /* mood override */
 
