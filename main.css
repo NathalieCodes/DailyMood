@@ -153,10 +153,11 @@ ul {
 }
 
 .mood-list li {
-    border: 1px solid black;
-    padding: 8px;
-    margin: 8px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 12px;
     background-color: white;
+    line-height: 1.2rem;
 }
 
 .mood-list li a {
@@ -167,12 +168,22 @@ ul {
 }
 
 .mood-list li a img {
-    width: 50px;
-    height: 50px;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
 }
 
 .mood-list li a span {
     flex-basis: 100%;
+}
+
+.mood-list li p {
+    height: 42px;
+}
+
+.no-comment {
+    color: lightgrey;
+    font-style: italic;
 }
 
 .cell-action {
@@ -194,6 +205,25 @@ ul {
 .mood-list li.cell-action a {
     display: inline-block;
     width: 100%;
+}
+
+.mood-info {
+    padding: 0 10px;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 8px;
+}
+
+.mood-date {
+    background-image: url(image/icon-calendar.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 18px;
+    padding-left: 20px;
+    color: #BABABA;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 5px;
 }
 
 
