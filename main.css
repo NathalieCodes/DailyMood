@@ -12,7 +12,6 @@ html, body {
 }
 
 .nav-bar {
-    /*background-color: orange;*/
     height: 48px;
     display: flex;
     justify-content: space-between;
@@ -26,7 +25,6 @@ html, body {
     height: 91%;
     height: calc(100% - 48px);
     width: 100%;
-    /*background-color: yellow;*/
     justify-content: space-evenly;
     align-items: center;
     position: relative;
@@ -38,15 +36,15 @@ html, body {
 
 section {
     height: 50%;
-    text-align: center;
     color: white;
-    text-transform: uppercase;
 }
 
 .mood-button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    text-align: center;
+
 }
 
 .mood-button a {
@@ -129,6 +127,12 @@ a {
 
 ul {
     list-style: none;
+}
+
+
+.index p {
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /* onboarding override */
