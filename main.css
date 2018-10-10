@@ -44,7 +44,6 @@ section {
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
-
 }
 
 .mood-button a {
@@ -86,7 +85,7 @@ section {
 }
 
 .nav-bar .button {
-    width: 80px;
+    width: 30px;
     padding: 4px 0;
     margin: 0 8px;
     text-align: center;
@@ -112,13 +111,13 @@ section {
     background-repeat: no-repeat;
     background-position: 8px center;
     padding-left: 10px;
-    width: 70px;
+    width: 20px;
     background-color: transparent;
     color: transparent;
 }
 
 nav h1 {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 a {
