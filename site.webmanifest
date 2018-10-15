@@ -1,0 +1,16 @@
+{
+    "name": "Daily Mood",
+    "short_name": "Daily Mood",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#5b119d",
+    "background_color": "#5b119d",
+    "start_url": "https://nathaliecodes.github.io/DailyMood/index.html",
+    "display": "standalone",
+    "orientation": "portrait"
+}
