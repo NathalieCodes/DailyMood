@@ -116,8 +116,8 @@ section {
     color: transparent;
 }
 
-nav h1 {
-    font-size: 1rem;
+.nav-bar h1 {
+    font-family: "Fierce Vector";
 }
 
 a {
@@ -275,3 +275,10 @@ ul {
     color: black;
 }
 
+@font-face {
+    font-family: 'Fierce Vector';
+    src: url('font/Fierce-Vector.woff2') format('woff2'),
+    url('font/Fierce-Vector.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
