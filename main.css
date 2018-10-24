@@ -168,7 +168,7 @@ ul {
     border-radius: 5px;
 }
 
-.button-skip {
+.button-skip, .button-secondary {
     background-color: #DBDBDC;
 }
 
