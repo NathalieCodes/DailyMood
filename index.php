@@ -33,12 +33,12 @@
         <section>
             <p>Pick your daily mood</p>
             <div class="mood-button">
-                <a href="comment.html" class="mood-happy"><img src="image/button-happy.png" alt="happy"></a>
-                <a href="comment.html" class="mood-meh"><img src="image/button-meh.png" alt="meh"></a>
-                <a href="comment.html" class="mood-sad"><img src="image/button-sad.png" alt="sad"></a>
-                <a href="comment.html" class="mood-happy"><img src="image/button-happy.png" alt="happy"></a>
-                <a href="comment.html" class="mood-meh"><img src="image/button-meh.png" alt="meh"></a>
-                <a href="comment.html" class="mood-sad"><img src="image/button-sad.png" alt="sad"></a>
+                <a href="comment.php?mood=happy" class="mood-happy"><img src="image/button-happy.png" alt="happy"></a>
+                <a href="comment.php?mood=meh" class="mood-meh"><img src="image/button-meh.png" alt="meh"></a>
+                <a href="comment.php?mood=sad" class="mood-sad"><img src="image/button-sad.png" alt="sad"></a>
+                <a href="comment.php?mood=happy" class="mood-happy"><img src="image/button-happy.png" alt="happy"></a>
+                <a href="comment.php?mood=meh" class="mood-meh"><img src="image/button-meh.png" alt="meh"></a>
+                <a href="comment.php?mood=sad" class="mood-sad"><img src="image/button-sad.png" alt="sad"></a>
             </div>
         </section>
 

@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+    $mood = $_GET["mood"];
+    if ($mood == "happy") {
+        $monImage = "<img class=\"mood-select\" src=\"image/button-happy.png\" alt=\"Selected Mood Happy\">";
+    }
+    elseif ($mood == "meh") {
+        $monImage = "<img class=\"mood-select\" src=\"image/button-meh.png\" alt=\"Selected Mood Meh\">";
+    }
+    else {
+        $monImage = "<img class=\"mood-select\" src=\"image/button-sad.png\" alt=\"Selected Mood Sad\">";
+    }
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +30,7 @@
 <body class="comment">
 
     <nav class="nav-bar">
-        <a href="index.html" class="button-back button">Pick your mood</a>
+        <a href="index.php" class="button-back button">Pick your mood</a>
         <h1>How was your day?</h1>
         <a href="#" class="button-ghost button"></a>
     </nav>
@@ -27,7 +38,7 @@
     <div class="parent">
         <div class="emoji-comment">
             <header>
-                <img class="mood-select" src="image/button-happy.png" alt="Selected Mood Happy">
+                <?php echo $monImage; ?>
             </header>
 
             <section>
