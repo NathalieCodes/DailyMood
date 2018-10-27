@@ -10,8 +10,7 @@ $user = [
 ];
 
 $moods = [
-    [
-        "id" => 1230,
+    1230 => [
         "type" => "happy",
         "date" => [
             "day" => "Monday",
@@ -21,8 +20,8 @@ $moods = [
         ],
         "comment" => "Une super journée",
         "user" => $user
-    ], [
-        "id" => 1231,
+    ],
+    1231 => [
         "type" => "meh",
         "date" => [
             "day" => "Sunday",
@@ -32,8 +31,8 @@ $moods = [
         ],
         "comment" => "Je sens que je vais avoir mes règles",
         "user" => $user
-    ], [
-        "id" => 1232,
+    ],
+    1232 => [
         "type" => "sad",
         "date" => [
             "day" => "Saturday",
@@ -43,8 +42,8 @@ $moods = [
         ],
         "comment" => "Beurk",
         "user" => $user
-    ], [
-        "id" => 1233,
+    ],
+    1233 => [
         "type" => "happy",
         "date" => [
             "day" => "Monday",
@@ -54,8 +53,8 @@ $moods = [
         ],
         "comment" => null,
         "user" => $user
-    ], [
-        "id" => 1234,
+    ],
+    1234 => [
         "type" => "meh",
         "date" => [
             "day" => "Sunday",
@@ -65,8 +64,8 @@ $moods = [
         ],
         "comment" => null,
         "user" => $user
-    ], [
-        "id" => 1235,
+    ],
+    1235 => [
         "type" => "sad",
         "date" => [
             "day" => "Saturday",
@@ -76,8 +75,8 @@ $moods = [
         ],
         "comment" => "Il pleut depuis 3 jours",
         "user" => $user
-    ], [
-        "id" => 1236,
+    ],
+    1236 => [
         "type" => "happy",
         "date" => [
             "day" => "Monday",
@@ -87,8 +86,8 @@ $moods = [
         ],
         "comment" => "Enfin le soleil est de retour",
         "user" => $user
-    ], [
-        "id" => 1237,
+    ],
+    1237 => [
         "type" => "meh",
         "date" => [
             "day" => "Sunday",
@@ -98,8 +97,8 @@ $moods = [
         ],
         "comment" => "MOYEN",
         "user" => $user
-    ], [
-        "id" => 1238,
+    ],
+    1238 => [
         "type" => "happy",
         "date" => [
             "day" => "Saturday",
