@@ -46,8 +46,8 @@
             </section>
         </div>
         <nav class="bottom-nav">
-            <a class="button button-skip" href="mood_list.html">Skip</a>
-            <a class="button button-primary" href="mood_list.html">Okay</a>
+            <a class="button button-skip" href="mood_list.php">Skip</a>
+            <a class="button button-primary" href="mood_list.php">Okay</a>
         </nav>
     </div>
 

@@ -21,7 +21,7 @@
     <nav class="nav-bar">
         <a href="#" class="button-ghost button"></a>
         <h1>How are you today?</h1>
-        <a href="mood_list.html" class="button-close button">&times;</a>
+        <a href="mood_list.php" class="button-close button">&times;</a>
     </nav>
 
     <div class="parent">
