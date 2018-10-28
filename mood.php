@@ -37,13 +37,13 @@ $comment = $mood["comment"];
 
     <div class="parent">
         <header>
-            <a href="edit.html">
+            <a href="edit.php?id=<?= $id ?>">
                 <img class="mood-select" src="image/button-<?= $type ?>.png" alt="Selected Mood <?= $type ?>">
             </a>
         </header>
 
         <section>
-            <a href="edit.html">
+            <a href="edit.php?id=<?= $id ?>">
                 <p>
                     <?= $comment ?>
                 </p>
@@ -51,7 +51,7 @@ $comment = $mood["comment"];
         </section>
 
         <nav class="bottom-nav">
-            <a class="button button-edit" href="edit.html">Edit</a>
+            <a class="button button-edit" href="edit.php?id=<?= $id ?>">Edit</a>
         </nav>
     </div>
 
