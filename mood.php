@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+include("data/moods.php");
+$id = $_GET["id"];
+$mood = $moods[$id];
+$type = $mood["type"];
+$date = $mood["date"];
+$day = $date["day"];
+$number = $mood["date"]["number"];
+$month = $date["month"];
+$year = $date["year"];
+$comment = $mood["comment"];
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,16 +38,14 @@
     <div class="parent">
         <header>
             <a href="edit.html">
-                <img class="mood-select" src="image/button-happy.png" alt="Selected Mood Happy">
+                <img class="mood-select" src="image/button-<?= $type ?>.png" alt="Selected Mood <?= $type ?>">
             </a>
         </header>
 
         <section>
             <a href="edit.html">
                 <p>
-                    this was my super great day ahahaha jajajaja.
-                    on s'est beaucoup amusé dans la fumée.
-                    mais maintenant que vais-je faire?
+                    <?= $comment ?>
                 </p>
             </a>
         </section>

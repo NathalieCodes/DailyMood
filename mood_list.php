@@ -39,7 +39,7 @@ include("data/moods.php");
                     $year = $date["year"];
                     $comment = $mood["comment"];
                     echo "<li class=\"cell-$type\">
-                    <a href=\"mood.html\">
+                    <a href=\"mood.php?id=$id\">
                         <img src=\"image/button-$type.png\" alt=\"$type\">
                         <span class=\"mood-info\">
                             <span class=\"mood-date\">$day $number $month $year</span>
