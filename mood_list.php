@@ -38,17 +38,17 @@ include("data/moods.php");
                     $month = $date["month"];
                     $year = $date["year"];
                     $comment = $mood["comment"];
-                    echo "<li class=\"cell-$type\">
-                    <a href=\"mood.php?id=$id\">
-                        <img src=\"image/button-$type.png\" alt=\"$type\">
-                        <span class=\"mood-info\">
-                            <span class=\"mood-date\">$day $number $month $year</span>
-                            <p>$comment</p>
+                ?>
+                <li class="cell-<?= $type ?>">
+                    <a href="mood.php?id=<?= $id ?>">
+                        <img src="image/button-<?= $type ?>.png" alt="<?= $type ?>">
+                        <span class="mood-info">
+                            <span class="mood-date"><?= "$day $number $month $year" ?></span>
+                            <p><?= $comment ?></p>
                         </span>
                     </a>
-                </li>";
-                }
-                ?>
+                </li>
+                <?php } ?>
             </ul>
             <a class="cell-action" href="index.php">
                 <span>How are you today?</span>
