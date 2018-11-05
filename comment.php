@@ -15,6 +15,7 @@
     <?php include ("head.include.php"); ?>
 </head>
 <body class="comment">
+<form method="post" action="comment_post.php?mood=<?= $mood ?>">
 
     <nav class="nav-bar">
         <a href="index.php" class="button-back button">Pick your mood</a>
@@ -29,14 +30,15 @@
             </header>
 
             <section>
-                <textarea class="enter-comment" placeholder="Write here about your day"></textarea>
+                <textarea name="comment" class="enter-comment" placeholder="Write here about your day"></textarea>
             </section>
         </div>
         <nav class="bottom-nav">
-            <a class="button button-skip" href="mood_list.php">Skip</a>
-            <a class="button button-primary" href="mood_list.php">Okay</a>
+            <button class="button button-skip">Skip</button>
+            <button class="button button-primary">Okay</button>
         </nav>
     </div>
+</form>
 
 </body>
 </html>
