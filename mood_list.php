@@ -1,6 +1,13 @@
 <?php
 include("datab_connect.include.php");
-$rows = mysqli_query($connexion, "SELECT * FROM `moods` WHERE `user_id` = 1 ORDER BY `date` DESC ");
+$userId = 1;
+$rows = mysqli_query($connexion,
+    "SELECT * 
+    FROM `moods` 
+    WHERE `user_id` = $userId 
+    ORDER BY `date` DESC 
+    LIMIT 10 "
+);
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
