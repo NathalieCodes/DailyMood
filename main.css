@@ -146,6 +146,9 @@ ul {
 }
 
 /* comment and edit */
+.comment form {
+    height: 100%;
+}
 
 .emoji-comment {
     background-color: white;
