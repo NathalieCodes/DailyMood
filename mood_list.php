@@ -1,5 +1,6 @@
 <?php
-include("data/moods.php");
+include("datab_connect.include.php");
+$rows = mysqli_query($connexion, "SELECT * FROM `moods` WHERE `user_id` = 1 ORDER BY `date` DESC ");
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,20 +18,16 @@ include("data/moods.php");
         <section>
             <ul>
                 <?php
-                foreach ($moods as $id => $mood) {
+                while ($mood = mysqli_fetch_assoc($rows)) {
                     $type = $mood["type"];
                     $date = $mood["date"];
-                    $day = $date["day"];
-                    $number = $mood["date"]["number"];
-                    $month = $date["month"];
-                    $year = $date["year"];
                     $comment = $mood["comment"];
                 ?>
                 <li class="cell-<?= $type ?>">
                     <a href="mood.php?id=<?= $id ?>">
                         <img src="image/button-<?= $type ?>.png" alt="<?= $type ?>">
                         <span class="mood-info">
-                            <span class="mood-date"><?= "$day $number $month $year" ?></span>
+                            <span class="mood-date"><?= "$date" ?></span>
                             <p><?= $comment ?></p>
                         </span>
                     </a>
@@ -41,8 +38,6 @@ include("data/moods.php");
                 <span>How are you today?</span>
             </a>
         </section>
-
     </div>
-
 </body>
 </html>
