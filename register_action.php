@@ -19,13 +19,13 @@ if (strlen($username) < 3) {
     redirectWithError(4);
 }
 
-$username = mysqli_real_escape_string($connexion, $username):
+include("datab_connect.include.php");
+
+$username = mysqli_real_escape_string($connexion, $username);
 $password = mysqli_real_escape_string($connexion, $password);
 
-include("db_connexion.php");
-
 $query = "SELECT * FROM `user` WHERE `username` = \"$username\";";
-$result = mysqli_query($connexion, $query):
+$result = mysqli_query($connexion, $query);
 $row = mysqli_fetch_assoc($connexion, $result);
 if (count($row) >= 1) {
     redirectWithError(5);
@@ -44,4 +44,4 @@ if ($result == false) {
     redirectWithError(6);
 }
 
-header("Location: mood_list.php");
+header("Location: index.php");

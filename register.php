@@ -7,7 +7,7 @@ switch ($error) {
         break;
         
     case 2: 
-        $errorMessage = "Password is to short, use at least 8 caracters";
+        $errorMessage = "Password is to short, use at least 8 characters";
         break;
 
     case 3: 
@@ -28,6 +28,9 @@ switch ($error) {
 }
 ?><html>
 <head>
+    <?php
+    include("head.include.php");
+    ?>
 </head>
 <body>
 <div class="form-wrapper">
@@ -45,6 +48,7 @@ switch ($error) {
             Password:
             <input type="password" name="password" value="">
         </label>
+        <input type="submit" value="register">
     </form>
 </div>
 </body>
