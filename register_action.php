@@ -24,18 +24,18 @@ include("datab_connect.include.php");
 $username = mysqli_real_escape_string($connexion, $username);
 $password = mysqli_real_escape_string($connexion, $password);
 
-$query = "SELECT * FROM `user` WHERE `username` = \"$username\";";
+$query = "SELECT * FROM `users` WHERE `username` = \"$username\";";
 $result = mysqli_query($connexion, $query);
-$row = mysqli_fetch_assoc($connexion, $result);
+$row = mysqli_fetch_assoc($result);
 if (count($row) >= 1) {
     redirectWithError(5);
 }
 
 $password = sha1($password);
-$date = date("Y-m-d H:i:s");
+$date = time();
 
 $query = "
-    INSERT INTO `user` (`username`, `password`, `registration_date`) 
+    INSERT INTO `users` (`username`, `password`, `registration_date`) 
     VALUES (\"$username\", \"$password\", \"$date\");
 ";
 $result = mysqli_query($connexion, $query);
