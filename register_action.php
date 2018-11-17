@@ -33,10 +33,11 @@ if (count($row) >= 1) {
 
 $password = sha1($password);
 $date = time();
+$cookieId = sha1(uniqid());
 
 $query = "
-    INSERT INTO `users` (`username`, `password`, `registration_date`) 
-    VALUES (\"$username\", \"$password\", \"$date\");
+    INSERT INTO `users` (`username`, `password`, `registration_date`, `cookie_id`) 
+    VALUES (\"$username\", \"$password\", \"$date\", \"$cookieId\");
 ";
 $result = mysqli_query($connexion, $query);
 

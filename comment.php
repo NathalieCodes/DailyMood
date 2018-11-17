@@ -1,4 +1,5 @@
 <?php
+    include ("login_check.php");
     $mood = $_GET["mood"];
     if ($mood == "happy") {
         $monImage = "<img class=\"mood-select\" src=\"image/button-happy.png\" alt=\"Selected Mood Happy\">";

@@ -1,5 +1,6 @@
 <?php
 date_default_timezone_set("America/Vancouver");
+include ("login_check.php");
 
 $_POST["comment"];
 $comment = $_POST["comment"];

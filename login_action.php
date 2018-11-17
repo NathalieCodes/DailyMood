@@ -26,8 +26,8 @@ if (count($row) == 0) {
     redirectWithError(1);
 }
 
-$userId = $row["id"];
+$cookieId = $row["cookie_id"];
 
-setcookie("userId", $userId, time()+24*60*60*30);
+setcookie("cookieId", $cookieId, time()+24*60*60*30);
 
 header("Location: index.php");

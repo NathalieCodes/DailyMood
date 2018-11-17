@@ -1,9 +1,4 @@
-<?php
-$userId = $_COOKIE['userId'];
-if (empty($userId)) {
-    header("Location: /login.php");
-    exit();
-}
+<?php include ("login_check.php");
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

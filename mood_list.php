@@ -1,4 +1,5 @@
 <?php
+include ("login_check.php");
 include("datab_connect.include.php");
 $userId = 1;
 $rows = mysqli_query($connexion,

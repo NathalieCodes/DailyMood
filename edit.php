@@ -1,4 +1,5 @@
 <?php
+include ("login_check.php");
 include("data/moods.php");
 $id = $_GET["id"];
 $mood = $moods[$id];
