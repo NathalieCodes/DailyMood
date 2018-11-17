@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<title>Daily Mood</title>
+<title>Daily Mood <?php echo $user["username"];?></title>
 <link rel="stylesheet" href="main.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
