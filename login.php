@@ -13,23 +13,26 @@ switch ($error) {
     ?>
 </head>
 <body>
-<div class="form-wrapper">
-    <form action="login_action.php" method="post">
-        <?php
-        if ($errorMessage != "") {
-            echo "<span class=\"error\">$errorMessage</span>";    
-        }
-        ?>
-        <label>
-            Username:
-            <input type="text" name="username" value="">
-        </label>
-        <label>
-            Password:
-            <input type="password" name="password" value="">
-        </label>
-        <input type="submit" value="Log in">
-    </form>
-</div>
+<form action="login_action.php" method="post">
+    <div class="form-wrapper">
+        <h1>Login</h1>
+        <div class="login">
+            <?php
+            if ($errorMessage != "") {
+                echo "<span class=\"error\">$errorMessage</span>";
+            }
+            ?>
+            <label>
+                Username:
+                <input type="text" name="username" value="">
+            </label>
+            <label>
+                Password:
+                <input type="password" name="password" value="">
+            </label>
+            <input class="button-login button button-primary" type="submit" value="Log in">
+        </div>
+    </div>
+</form>
 </body>
 </html>

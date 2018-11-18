@@ -78,6 +78,7 @@ section {
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
+    border: none;
 }
 
 .button-ghost {
@@ -284,4 +285,54 @@ ul {
     url('font/Fierce-Vector.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+/* register */
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper h1 {
+    color: white;
+    padding-bottom: 40px;
+    font-family: "Fierce Vector";
+}
+
+.form-wrapper .error {
+    font-weight: bold;
+    color: darkred;
+    padding: 10px;
+}
+
+.register, .login {
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 1px rgba(0,0,0,0.40)
+}
+
+label {
+    margin: 20px 20px 0px 20px;
+}
+
+label input {
+    display: block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+}
+
+.button-register, .button-login {
+    margin: 20px auto;
+    width: initial;
+    min-width: 100px;
 }

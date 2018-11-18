@@ -33,23 +33,26 @@ switch ($error) {
     ?>
 </head>
 <body>
-<div class="form-wrapper">
     <form action="register_action.php" method="post">
-        <?php
-        if ($errorMessage != "") {
-            echo "<span class=\"error\">$errorMessage</span>";    
-        }
-        ?>
-        <label>
-            Username:
-            <input type="text" name="username" value="">
-        </label>
-        <label>
-            Password:
-            <input type="password" name="password" value="">
-        </label>
-        <input type="submit" value="register">
+        <div class="form-wrapper">
+            <h1>Register</h1>
+            <div class="register">
+                <?php
+                if ($errorMessage != "") {
+                    echo "<span class=\"error\">$errorMessage</span>";
+                }
+                ?>
+                <label class="username">
+                    Username:
+                    <input type="text" name="username" value="">
+                </label>
+                <label class="password">
+                    Password:
+                    <input type="password" name="password" value="">
+                </label>
+                <input class="button-register button button-primary" type="submit" value="register">
+            </div>
+        </div>
     </form>
-</div>
 </body>
 </html>
