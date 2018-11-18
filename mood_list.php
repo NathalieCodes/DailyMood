@@ -1,7 +1,7 @@
 <?php
 include ("login_check.php");
-include("datab_connect.include.php");
-$userId = 1;
+
+$userId = $user["id"];
 $rows = mysqli_query($connexion,
     "SELECT * 
     FROM `moods` 

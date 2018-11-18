@@ -1,13 +1,15 @@
 <?php
-date_default_timezone_set("America/Vancouver");
 include ("login_check.php");
 
-$_POST["comment"];
 $comment = $_POST["comment"];
+$skip = $_POST["skip"];
 $type = $_GET["mood"];
 $date = date("Y-m-d H:i:s");
-$userId = 1;
-include ("datab_connect.include.php");
+$userId = $user["id"];
+
+if (!empty($skip)) {
+    $comment = "";
+}
 
 mysqli_query($connexion,
     "INSERT INTO `moods` (`type`, `date`, `comment`, `user_id`) 

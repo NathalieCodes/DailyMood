@@ -35,8 +35,8 @@
             </section>
         </div>
         <nav class="bottom-nav">
-            <button class="button button-skip">Skip</button>
-            <button class="button button-primary">Okay</button>
+            <input type="submit" name="skip" value="Skip" class="button button-skip">
+            <input type="submit" name="okay" value="Okay" class="button button-primary">
         </nav>
     </div>
 </form>
