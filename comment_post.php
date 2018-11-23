@@ -1,9 +1,9 @@
 <?php
 include ("login_check.php");
 
-$comment = $_POST["comment"];
-$skip = $_POST["skip"];
-$type = $_GET["mood"];
+$comment = mysqli_real_escape_string($connexion, $_POST["comment"]);
+$skip = mysqli_real_escape_string($connexion, $_POST["skip"]);
+$type = mysqli_real_escape_string($connexion, $_GET["mood"]);
 $date = date("Y-m-d H:i:s");
 $userId = $user["id"];
 

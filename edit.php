@@ -1,16 +1,23 @@
 <?php
 include ("login_check.php");
-include("data/moods.php");
-$id = $_GET["id"];
-$mood = $moods[$id];
+$moodId = $_GET["moodId"];
+$moodId = mysqli_real_escape_string($connexion, $moodId);
+
+$userId = $user["id"];
+$query = "SELECT * 
+    FROM `moods` 
+    WHERE `user_id` = $userId 
+    AND `id` = $moodId;";
+$result = mysqli_query($connexion, $query);
+$mood = mysqli_fetch_assoc($result);
+
 $type = $mood["type"];
 $date = $mood["date"];
 $day = $date["day"];
 $number = $mood["date"]["number"];
 $month = $date["month"];
 $year = $date["year"];
-$comment = $mood["comment"];
-?><!DOCTYPE html>
+$comment = $mood["comment"];?><!DOCTYPE html>
 <html lang="en">
 <head>
     <?php include ("head.include.php"); ?>
@@ -48,8 +55,8 @@ $comment = $mood["comment"];
     </section>
 
     <nav class="bottom-nav">
-        <a class="button button-cancel" href="mood.php?id=<?= $id ?>">Cancel</a>
-        <a class="button button-primary" href="mood.php?id=<?= $id ?>">Ok</a>
+        <a class="button button-cancel" href="mood.php?moodId=<?= $moodId ?>">Cancel</a>
+        <a class="button button-primary" href="mood.php?moodId=<?= $moodId ?>">Ok</a>
     </nav>
 </div>
 

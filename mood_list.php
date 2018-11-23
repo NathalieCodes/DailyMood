@@ -44,9 +44,10 @@ if ($lastDate >= $midnightDate) {
                     $type = $mood["type"];
                     $date = $mood["date"];
                     $comment = $mood["comment"];
+                    $moodId = $mood["id"];
                 ?>
                 <li class="cell-<?= $type ?>">
-                    <a href="mood.php?id=<?= $id ?>">
+                    <a href="mood.php?moodId=<?= $moodId ?>">
                         <img src="image/button-<?= $type ?>.png" alt="<?= $type ?>">
                         <span class="mood-info">
                             <span class="mood-date"><?= "$date" ?></span>

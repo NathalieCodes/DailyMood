@@ -1,8 +1,16 @@
 <?php
 include ("login_check.php");
-include("data/moods.php");
-$id = $_GET["id"];
-$mood = $moods[$id];
+$moodId = $_GET["moodId"];
+$moodId = mysqli_real_escape_string($connexion, $moodId);
+
+$userId = $user["id"];
+$query = "SELECT * 
+    FROM `moods` 
+    WHERE `user_id` = $userId 
+    AND `id` = $moodId;";
+$result = mysqli_query($connexion, $query);
+$mood = mysqli_fetch_assoc($result);
+
 $type = $mood["type"];
 $date = $mood["date"];
 $day = $date["day"];
@@ -25,13 +33,13 @@ $comment = $mood["comment"];
 
     <div class="parent">
         <header>
-            <a href="edit.php?id=<?= $id ?>">
+            <a href="edit.php?moodId=<?= $moodId ?>">
                 <img class="mood-select" src="image/button-<?= $type ?>.png" alt="Selected Mood <?= $type ?>">
             </a>
         </header>
 
         <section>
-            <a href="edit.php?id=<?= $id ?>">
+            <a href="edit.php?moodId=<?= $moodId ?>">
                 <p>
                     <?= $comment ?>
                 </p>
@@ -39,7 +47,7 @@ $comment = $mood["comment"];
         </section>
 
         <nav class="bottom-nav">
-            <a class="button button-edit" href="edit.php?id=<?= $id ?>">Edit</a>
+            <a class="button button-edit" href="edit.php?moodId=<?= $moodId ?>">Edit</a>
         </nav>
     </div>
 
