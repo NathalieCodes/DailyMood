@@ -9,6 +9,20 @@ $rows = mysqli_query($connexion,
     ORDER BY `date` DESC 
     LIMIT 10 "
 );
+
+$moods = mysqli_fetch_all($rows, MYSQLI_ASSOC);
+
+$mood = $moods[0];
+
+$lastDate = strtotime($mood["date"]);
+$midnightDate = strtotime(date("Y-m-d") . " 00:00:01");
+
+if ($lastDate >= $midnightDate) {
+    $alreadyPosted = true;
+} else {
+    $alreadyPosted = false;
+}
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +40,7 @@ $rows = mysqli_query($connexion,
         <section>
             <ul>
                 <?php
-                while ($mood = mysqli_fetch_assoc($rows)) {
+                foreach ($moods as $mood) {
                     $type = $mood["type"];
                     $date = $mood["date"];
                     $comment = $mood["comment"];
@@ -42,9 +56,15 @@ $rows = mysqli_query($connexion,
                 </li>
                 <?php } ?>
             </ul>
+            <?php if (!$alreadyPosted) { ?>
             <a class="cell-action" href="index.php">
                 <span>How are you today?</span>
             </a>
+            <?php } else { ?>
+            <a class="cell-action already-posted" href="#">
+                <span>Already posted today</span>
+            </a>
+            <?php } ?>
         </section>
     </div>
 </body>
